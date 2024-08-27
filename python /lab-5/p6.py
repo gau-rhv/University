@@ -1,17 +1,19 @@
-def cube_sum(n):
-    s = 0
-    while n > 0:
-        s += (n % 10) ** 3
-        n //= 10
-    return s
+def prime_factors(n):
+    factors = []
+    if n % 2 == 0:
+        while n % 2 == 0:
+            factors += [2]
+            n //= 2
+    for i in range(3, int(n**0.5) + 1, 2):
+        if n % i == 0:
+            while n % i == 0:
+                factors += [i]
+                n //= i
+    if n > 2:
+        factors += [n]
+    return factors
 
-def print_armstrong(start, end):
-    for num in range(start, end + 1):
-        if num == cube_sum(num):
-            print(num)
+n = int(input("Enter a number: "))
+factors = prime_factors(n)
 
-s = int(input("Enter start of range: "))
-e = int(input("Enter end of range: "))
-
-print("Armstrong numbers in range:")
-print_armstrong(s, e)
+print("The prime factors of", n, "are:", factors)

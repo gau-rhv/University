@@ -1,9 +1,8 @@
-lst = [int(x) for x in input().split()]
 
-x = int(input())
+lst = [int(i) for i in input("Enter numbers separated by spaces: ").split()]
+x = int(input("Enter a number to append: "))
 lst.append(x)
-print(lst)
-
-ext = [int(x) for x in input().split()]
+print("List after appending:", lst)
+ext = [int(i) for i in input("Enter numbers to extend the list: ").split()]
 lst.extend(ext)
-print(lst)
+print("List after extending:", lst)

@@ -11,5 +11,12 @@ student1_id = input("Enter ID for student 1: ")
 student1_name = input("Enter name for student 1: ")
 student1_class = input("Enter class for student 1: ")
 
+student2_id = input("Enter ID for student 2: ")
+student2_name = input("Enter name for student 2: ")
+student2_class = input("Enter class for student 2: ")
+
 student1 = Student(student1_id, student1_name, student1_class)
+student2 = Student(student2_id, student2_name, student2_class)
+
 student1.display_attributes()
+student2.display_attributes()
